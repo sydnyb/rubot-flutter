@@ -3,12 +3,15 @@ workflows:
     name: Build Android APK
     environment:
       flutter: stable
+      xcode: latest
       vars:
-        ANDROID_BUILD_TYPE: release
+        FLUTTER_BUILD_MODE: release
     scripts:
-      - name: Get Flutter packages
+      - name: Install dependencies
         script: flutter pub get
-      - name: Build APK
+      - name: Clean previous builds
+        script: flutter clean
+      - name: Build release APK
         script: flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
