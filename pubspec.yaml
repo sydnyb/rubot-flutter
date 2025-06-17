@@ -1,0 +1,21 @@
+name: rubot_flutter_final
+description: RuBot
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.8.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter: ^4.13.0
+  flutter_tts: ^3.8.5
+  speech_to_text: ^6.6.2
+  http: ^1.4.0
+  video_player: ^2.7.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/rubot.html
+    - assets/andromeda.mp4
